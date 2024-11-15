@@ -1,32 +1,46 @@
-#include <iostream>
-using namespace std;
+## include <iostream>
+
 int main() {
+
+    char op;
     double num1;
     double num2;
-    char op;
-    cout<<"###### Simple Calculator Program ######"<<endl;
-    cout <<"Type first number: ";
-    cin >> num1;
-    cout <<"Enter only '*, /, -, +':";
-    cin >> op;
-    cout <<"Enter second number: ";
-    cin >> num2;
-    switch(op) {
+    double result;
+
+    std::cout << "###### CALCULATOR PROGRAM ######";
+
+    std::cout << "Enter either (+ - * /): ";
+    std::cin >> op;
+
+    std::cout << "Enter #1: ";
+    std::cin >> num1;
+
+    std::cout << "Enter #2: ";
+    std::cin >> num2;
+
+    switch(op){
         case '+':
-            cout << num1 + num2;
-        break;
-
+            result = num1 + num2;
+            std::cout << "result: " << result << '\n';
+            break;
         case '-':
-            cout << num1 - num2;
-        break;
+            result = num1 - num2;
+            std::cout << "result: " << result << '\n';
+            break;
         case '*':
-            cout << num1 * num2;
-        break;
+            result = num1 * num2;
+            std::cout << "result: " << result << '\n';
+            break;
         case '/':
-            cout << num1 / num2;
-        break;
+            result = num1 / num2;
+            std::cout << "result: " << result << '\n';
+            break;
         default:
-            cout<<"Wrong Input" <<endl;
+            std::cout << "That wasn't a valid operator\n";
+            break;
     }
-}
 
+    std::cout << "**********************************";
+
+    return 0;
+}
